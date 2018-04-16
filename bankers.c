@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include<conio.h>
-#include<stdlib.h>
 int cur[5][5], max_claim[5][5], avail[5];
 int allocation[5] = {0,0,0,0,0};
 int max[5], running[5], safe=0;
