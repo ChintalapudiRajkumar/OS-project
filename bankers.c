@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include<conio.h>
-int curr[5][5], max_claim[5][5], avail[5];
+int cur[5][5], max_claim[5][5], avail[5];
 int allocation[5] = {0,0,0,0,0};
 int max[5], running[5], safe=0;
 int count = 0,i,j,exec,res,pro,k=1;
@@ -29,7 +29,7 @@ int main()
     {
         for(j = 0; j < res; j++) 
         {
-              scanf("%d", &curr[i][j]);
+              scanf("%d", &cur[i][j]);
         }
     }
  
@@ -53,7 +53,7 @@ int main()
     {
         for (j = 0; j < res; j++) 
         {
-            printf("\t%d", curr[i][j]);
+            printf("\t%d", cur[i][j]);
         }
     printf("\n");
     }
@@ -71,7 +71,7 @@ int main()
     {
         for (j = 0; j < res; j++) 
         {
-            allocation[j] += curr[i][j];
+            allocation[j] += cur[i][j];
         }
     }
  
@@ -103,7 +103,7 @@ int main()
                 exec = 1;
                 for (j = 0; j < res; j++) 
                 {
-                    if (max_claim[i][j] - curr[i][j] > avail[j]) 
+                    if (max_claim[i][j] - cur[i][j] > avail[j]) 
                     {
                         exec = 0;
                         break;
@@ -117,7 +117,7 @@ int main()
                     safe = 1;
 					for (j = 0; j < res; j++) 
                     {
-                        avail[j] += curr[i][j];
+                        avail[j] += cur[i][j];
                     }
                     break;
                 }
