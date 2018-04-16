@@ -10,7 +10,7 @@ int main()
 
 void *function1()
 {
-	int l,i,temp=0,p,t;
+	int l,i,temp=0,p,k;
     printf("Enter the limit:");    
     scanf("%d",&l);    
     int list[l];    
@@ -20,11 +20,11 @@ void *function1()
     }    
     for(i=0;i<temp;i++){
         if(list[i]!=0){
-            t=i;
+            k=i;
             p=list[i];
-            while((t+p)<temp){
-                t=t+p;
-                list[t]=0;
+            while((k+p)<temp){
+                k=k+p;
+                list[k]=0;
             }
         }
     }
